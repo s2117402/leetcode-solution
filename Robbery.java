@@ -6,8 +6,12 @@ public class Robbery {
 		System.out.println(compare(store));
 	        
 	    }
-	public static float compare(float[] store){
-		float x=rob(0,store);
+    
+    
+    //This function used to compare two different start which robber can get more money,
+    //because we must rob either of first two stores for more money.
+	public static float compare(float[] store){  //第一家和第二家必有一家被打劫,因为从第三家打劫为什么么不顺便
+		float x=rob(0,store);                    //打劫第一家又多钱又不会被抓
 		float y=rob(1,store);
 		return (x>y)?x:y;
 	}
