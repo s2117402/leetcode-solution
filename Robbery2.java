@@ -7,13 +7,12 @@ public class Robbery2{
 		System.out.println(compare(store));
 	        
 	    }
-	public static float compare(float[] store){
-		float y=rob(1,store);
-		robbed=false;
-		float x=rob(0,store);
-		System.out.println(robbed);
-		if(y>=x){
-			return y;
+	public static float compare(float[] store){  //I just do some change from robbery.java
+		float y=rob(1,store);                     //when max money case is start=1,we don't need to 
+		robbed=false;                            //worry,but the other case,we need to know if
+		float x=rob(0,store);                   //the last store is robbed,if that's true,then
+		if(y>=x){                               //calculate if the sum that subtract last store's money
+			return y;                           //is still the maxiam,then return the max sum 
 		}else if(robbed==true){
 			return Math.max(x-store[store.length-1],y);
 		}else{

@@ -66,8 +66,9 @@ public class justification {
 				for(int j=0;j<gapN;j++){
 					if(j==0){
 						gap[j]=spaceleft/gapN+spaceleft%gapN; //if the number of spaces can't
-					}                                        //be divided exactly to the number
-					gap[j]=spaceleft/gapN;                  //of gaps,assign the remainder spaces
+					}else{                                        //be divided exactly to the number
+					gap[j]=spaceleft/gapN; 
+					}                                       //of gaps,assign the remainder spaces
 				}                                           //to the first element in gap[]
 			}
 			print(input,start,gapN,gap);

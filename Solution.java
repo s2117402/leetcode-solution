@@ -23,3 +23,10 @@ public class Solution {
         
     }
 }
+
+
+//In this question,we use the property of map class to achive this,we all know in map class
+//we all know map class is similar to array,it has index and value,and it has the containkey
+//function as well,we can use this to search if this map has the number equal to target-num,
+//if it's true,we just need to get the index,and output it(In this question,we use the key of
+//map to store the value in array,and the value of the map to store the index of array)

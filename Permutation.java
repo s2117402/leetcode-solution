@@ -19,27 +19,16 @@ public class Permutation {
 		
 	    }
 	
-	public int[] Str2intArr(String str){
+	public int[] Str2intArr(String str){   //help us to tansform from Sring to int[]
 		int[] num=new int[str.length()];
 		for(int i=0;i<str.length();i++){
 			num[i]=(int)(str.charAt(i)-48);
 		}
 		return num;
 	}
-	public int[] swap(int[] sequence,int start,int end){
-		int temp=sequence[start];
-		sequence[start]=sequence[end];
-		sequence[end]=temp;
-		return sequence;
-	}
 	
-	public int[] sortAgain(int[] sequence,int start){
-		Arrays.sort(sequence, start+1, sequence.length);	
-        return sequence;
-	}
-	
-	public boolean check(int[] sequence){
-		int temp=0;
+	public boolean check(int[] sequence){      //check if this number is in the largest form,		                                       
+		int temp=0;                             //if it is,output the number in inverted order
 		for(int i=sequence.length-1;i>=0;i--){
 			if(sequence[i]<temp){
 				return true;
@@ -53,12 +42,13 @@ public class Permutation {
 		}
 		return false;
 	}
-
-	public void findStart(int[] sequence){
-		int temp=0;
-		for(int i=sequence.length-1;i>=0;i--){
+	
+	public void findStart(int[] sequence){    //Check each elements of this array backward,
+		int temp=0;                           //find the first element is smaller than
+		for(int i=sequence.length-1;i>=0;i--){ //next,return the index of this element
 			if(sequence[i]<temp){
 				start=i;
+				break;
 			}else{
 				temp=sequence[i];
 			}
@@ -67,9 +57,9 @@ public class Permutation {
 	
 	}
 	
-	public void findEnd(int[] sequence,int start){
-		int temp=sequence[start];
-		for(int i=sequence.length-1;i>=0;i--){
+	public void findEnd(int[] sequence,int start){  //Check each elements of this array backward,
+		int temp=sequence[start];                   //find the least number is larger than the number
+		for(int i=sequence.length-1;i>=0;i--){      //in sequence[start]
 			if(sequence[i]>temp){
 				end=i;
 				break;
@@ -77,6 +67,20 @@ public class Permutation {
 		}
 		
 	}
+	
+	public int[] swap(int[] sequence,int start,int end){  //swap the value of start and end
+		int temp=sequence[start];
+		sequence[start]=sequence[end];
+		sequence[end]=temp;
+		return sequence;
+	}
+	
+	
+	public int[] sortAgain(int[] sequence,int start){
+		Arrays.sort(sequence, start+1, sequence.length);	
+        return sequence;
+	}
+	
 	
 	public void print(int[] sequence){
 		for(int i=0;i<sequence.length;i++){

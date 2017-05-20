@@ -3,6 +3,8 @@ package leetcode;
 public class DecodeWays {
 	public static void main(String[] args) {
 		//The Sring length must larger or equal to 3,and no 0 in the String.
+		//my thinking in this question is basically similar to the climbing staris question,
+		//use Fibonacci to resolve this question.
 
 	    String input="1234";
 	    check(input);

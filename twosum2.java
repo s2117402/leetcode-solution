@@ -24,5 +24,8 @@ public class twosum2 {
 		}
 		return result;
 	}
-
 }
+//use two arrays,one search from left to right,the other from right to left.Each array's
+//length is two since not only index but also value we need to save.if we find two values
+//addition is larger to target,we will move right array one position left,then compare again
+//until their addition is equal to target,return the index of two array.

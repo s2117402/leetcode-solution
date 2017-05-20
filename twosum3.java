@@ -22,4 +22,5 @@ public class twosum3 {
         
     }
 }
-
+//Basically same or easier than twosum1,but we use the same thought,hashmap.And we just need
+//to return true or false but the indices.

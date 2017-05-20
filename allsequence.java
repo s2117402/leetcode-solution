@@ -1,5 +1,4 @@
 package leetcode;
-
 import java.util.Arrays;
 
 public class allsequence {
@@ -9,8 +8,10 @@ public class allsequence {
 	public static void main(String[]arg){
 		int n=4;
 		int i=9;
-		allsequence as=new allsequence();
-        as.do_operation(returnArray(n), i);		
+		if(check(n,i)){
+	        do_operation(returnArray(n), i);		
+
+		}
 	}
 	
 	
@@ -26,14 +27,14 @@ public class allsequence {
 		}
 	}
 	
-	public static int[] returnArray(int n){
+	public static int[] returnArray(int n){ //inputs a number and returns an array based on the input
 		int[] sequence=new int[n];
 		for(int i=1;i<=n;i++)
 			sequence[i-1]=i;
 		return sequence;
 	}
 	
-	public boolean check(int n,int i){
+	public static boolean check(int n,int i){    //input validation
 		if(n<2)
 			return false;
 		int range=1;
